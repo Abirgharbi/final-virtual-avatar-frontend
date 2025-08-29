@@ -65,7 +65,7 @@ Lancez l'application en mode développement :
 ```bash
 yarn dev 
 ```
-## 📋 Guide pour l'Encadrant
+## 📋 Guide 
 - Vérifiez l'intégration de `UI.jsx` (accueil, enregistrement, guidage).
 - Testez l'entrée vocale `InputWithVoice` et les réponses de l'avatar (UseChat).
 - Validez le rendu 3D et les animations dans `Avatar.jsx` (modèle GLB).
