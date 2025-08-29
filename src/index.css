@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --leva-sizes-rootWidth: 340px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #3434d7;
+  background-image: linear-gradient(19deg, #3845a9 0%, #ddd6f3 100%);
+}
+
+body.greenScreen {
+  background-color: #00ff00;
+  background-image: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 10px #fff; }
+  50% { text-shadow: 0 0 20px #8b5cf6; }
+}
+
+.animate-textGlow {
+  animation: textGlow 2s infinite alternate;
+}
+
+.guidance-box {
+  background: #f5faff;
+  border-left: 5px solid #007bff;
+  padding: 10px;
+  margin-top: 10px;
+}
+
