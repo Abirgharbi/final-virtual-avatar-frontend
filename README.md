@@ -1,8 +1,38 @@
 # Projet Avatar IA Interactif - Frontend
 
 <img width="1902" height="917" alt="image" src="https://github.com/user-attachments/assets/b4092b7f-12e6-4d17-9fb0-1d2103890eb2" />
- <!-- Remplacez par une capture d'écran ou un logo -->
 
+## 🏛️ Architecture
+
+```mermaid
+graph TD
+    A[Frontend<br>React/TypeScript] -->|HTTP Requests| B[Backend<br>Node.js/Express]
+    
+    subgraph Frontend
+        A -->|Composants| C[UI.jsx<br>Interface principale]
+        A -->|Composants| D[InputWithVoice.jsx<br>Entrée vocale]
+        A -->|Composants| E[InteractiveBuildFindPlan.jsx<br>Guidage interactif]
+        A -->|Composants| F[UseChat.jsx<br>IA conversationnelle]
+        A -->|Composants| G[Avatar.jsx<br>Avatar 3D]
+        A -->|Composants| H[components/<br>Composants réutilisables]
+    end
+    
+    B -->|REST API| I[recognize-face<br>Reconnaissance faciale]
+    B -->|REST API| J[register-visitor<br>Enregistrement visiteur]
+    B -->|REST API| K[chat<br>IA conversationnelle]
+    B -->|REST API| L[appointments<br>Google Calendar]
+    B -->|REST API| M[api-login<br>Authentification]
+    B -->|REST API| N[check-out<br>Fin de visite]
+    
+    B -->|Données JSON| A
+    B -->|Service externe| O[Reconnaissance Faciale<br>Python Flask]
+    B -->|Service externe| P[Groq API<br>Llama3-70b]
+    B -->|Service externe| Q[ElevenLabs API<br>Text-to-Speech]
+    B -->|Service externe| R[Rhubarb<br>Lip Sync]
+    B -->|Service externe| S[Google Calendar API]
+    B -->|Service externe| T[Pinecone<br>Vector Search]
+```
+ 
 ## 📖 Description
 
 Ce dépôt contient le code source du **frontend** pour le projet **Avatar IA Interactif pour Accueil Intelligent**, conçu pour automatiser et humaniser l'accueil physique en entreprise via un avatar IA. Le système intègre des fonctionnalités telles que la reconnaissance faciale, l'enregistrement des visiteurs,prise de rendez vous et un guidage intelligent dans les locaux.
